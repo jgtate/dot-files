@@ -1,0 +1,7 @@
+$DB::deep = 500;
+$DB::alias{px} = 's/px/DB::px/';
+sub px {
+  my $expr = shift;
+  require Data::Printer;
+  print Data::Printer::p($expr);
+}
