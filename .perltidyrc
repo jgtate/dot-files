@@ -1,0 +1,13 @@
+-st
+-se
+-i=2 -ci=0
+-bar
+-nsbl
+# -lp
+# -vt=1
+# -sot
+-nsfs
+-nolq
+-boc
+
+# -l132 -i=2 -ci=2 -nsfs -bar -bbb -bbs -bbc -anl -otr
