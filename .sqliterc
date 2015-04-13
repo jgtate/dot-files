@@ -1,0 +1,4 @@
+-- some settings to make the SQLite output more like mysql's default
+.header on
+.mode column
+.timer on
