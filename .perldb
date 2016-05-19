@@ -3,7 +3,7 @@ $DB::alias{px} = 's/px/DB::px/';
 sub px {
   my $expr = shift;
   require Data::Printer;
-  print ref $expr
-        ? Data::Printer::p($expr)
-        : $expr;
+  print { DB::OUT } ref $expr
+                    ? Data::Printer::np($expr)
+                    : $expr;
 }
