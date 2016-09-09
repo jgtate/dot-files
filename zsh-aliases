@@ -1,0 +1,12 @@
+
+alias ls='ls -F'
+alias ll='ls -hl'
+alias lr='ls -hlrt'
+alias m=more
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+alias vim='vim -X'
+# alias server='ps -aef | grep -e " ngin[x]" -e perl-fcg[i]'
+alias proveall='prove -j9 --state=save,slow -lr t'
+

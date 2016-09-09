@@ -76,42 +76,30 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 #-------------------------------------------------------------------------------
-# set the command prompt
 
+# set the command prompt
 PROMPT='%{$fg[cyan]%}%m [%30<...<%~] %h%-% %{$reset_color%}'
 # RPROMPT='%B[%~]%b'
 
-#-------------------------------------------------------------------------------
 # enable autocomplete
-
 autoload -Uz compinit
 compinit
 
-#-------------------------------------------------------------------------------
 # automatically rehash the path
-
 zstyle ':completion:*' rehash true
 
-#-------------------------------------------------------------------------------
 # set up fuzzy file finding with FZF
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#-------------------------------------------------------------------------------
+# import global aliases
+[ -f ~/.zsh-aliases ] && source ~/.zsh-aliases
+
+# override global settings with machine-specific settings
+ZSHRCLOCAL=~/.zshrc-`uname`
+[ -f $ZSHRCLOCAL ] && source $ZSHRCLOCAL
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-alias ls='ls -F --color=auto'
-alias ll='ls -hlF'
-alias lr='ls -hlrtF'
-alias m=more
-alias rm='rm -i'
-alias mv='mv -i'
-alias cp='cp -i'
-alias vim='vim -X'
-# alias server='ps -aef | grep -e " ngin[x]" -e perl-fcg[i]'
-alias server="ps -aef | grep -e 'ngin[x]' -e '800[2]'"
-alias proveall='prove -j9 --state=save,slow -lr t'
 

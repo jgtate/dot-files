@@ -1,0 +1,4 @@
+
+alias ls='ls -F --color=auto'
+alias server="ps -aef | grep -e 'ngin[x]' -e '800[2]'"
+
