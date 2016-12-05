@@ -1,4 +1,8 @@
 
+# ZSH configuration specific to linux
+
 alias ls='ls -F --color=auto'
 alias server="ps -aef | grep -e 'ngin[x]' -e '800[2]'"
 
+export VIRTUALENVWRAPPER_PYTHON=$HOME/.linuxbrew/bin/python3
+source $HOME/.linuxbrew/bin/virtualenvwrapper.sh

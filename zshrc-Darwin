@@ -1,5 +1,9 @@
 
+# ZSH configuration specific to mac/Darwin
+
 PROMPT='%{$fg[blue]%}%m [%30<...<%~] %h%-% %{$reset_color%}'
 
 alias ls='ls -FG'
 
+export VIRTUALENVWRAPPER_PYTHON=$HOME/Software/homebrew/bin/python3
+source $HOME/Software/homebrew/bin/virtualenvwrapper.sh
