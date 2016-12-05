@@ -77,6 +77,9 @@ source $ZSH/oh-my-zsh.sh
 
 #-------------------------------------------------------------------------------
 
+# don't share history between shells
+setopt no_share_history
+
 # set the command prompt
 PROMPT='%{$fg[cyan]%}%m [%30<...<%~] %h%-% %{$reset_color%}'
 # RPROMPT='%B[%~]%b'
@@ -97,6 +100,12 @@ zstyle ':completion:*' rehash true
 # override global settings with machine-specific settings
 ZSHRCLOCAL=~/.zshrc-`uname`
 [ -f $ZSHRCLOCAL ] && source $ZSHRCLOCAL
+
+# set up python3 and virtualenvwrapper
+export PYTHONPATH=
+export WORKON_HOME=$HOME/python_venvs
+export VIRTUALENVWRAPPER_PYTHON=$HOME/.linuxbrew/bin/python3
+source $HOME/.linuxbrew/bin/virtualenvwrapper.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
