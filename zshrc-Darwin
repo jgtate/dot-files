@@ -1,3 +1,5 @@
 
+PROMPT='%{$fg[blue]%}%m [%30<...<%~] %h%-% %{$reset_color%}'
+
 alias ls='ls -FG'
 
