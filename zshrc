@@ -51,7 +51,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fancy-ctrl-z git jsontools rand-quote wd)
+plugins=(fancy-ctrl-z git jsontools dirhistory yarn fabric)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,6 +93,7 @@ zstyle ':completion:*' rehash true
 
 # set up fuzzy file finding with FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 
 # import global aliases
 [ -f ~/.zsh-aliases ] && source ~/.zsh-aliases
