@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/Software/google-cloud-sdk/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -51,7 +52,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fancy-ctrl-z git jsontools dirhistory yarn fabric)
+plugins=(fancy-ctrl-z git jsontools dirhistory yarn fabric docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,6 +106,10 @@ ZSHRCLOCAL=~/.zshrc-`uname`
 # set up python3 and virtualenvwrapper
 export PYTHONPATH=
 export WORKON_HOME=$HOME/python_venvs
+
+# setup direnv
+eval "$(direnv hook zsh)"
+alias tmux='direnv exec / tmux'
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh

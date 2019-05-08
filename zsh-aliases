@@ -6,7 +6,7 @@ alias m=more
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
-alias vim='vim -X'
+alias vi=vim
 # alias server='ps -aef | grep -e " ngin[x]" -e perl-fcg[i]'
 alias proveall='prove -j9 --state=save,slow -lr t'
 
